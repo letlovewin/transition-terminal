@@ -1,0 +1,52 @@
+[debug] [2024-01-07T14:36:40.598Z] ----------------------------------------------------------------------
+[debug] [2024-01-07T14:36:40.599Z] Command:       /usr/local/lib/node_modules/firebase-cli/bin/firebase /home/gray/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2024-01-07T14:36:40.599Z] CLI Version:   13.0.2
+[debug] [2024-01-07T14:36:40.600Z] Platform:      linux
+[debug] [2024-01-07T14:36:40.600Z] Node Version:  v18.5.0
+[debug] [2024-01-07T14:36:40.600Z] Time:          Sun Jan 07 2024 06:36:40 GMT-0800 (Pacific Standard Time)
+[debug] [2024-01-07T14:36:40.600Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-07T14:36:40.602Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-01-07T14:36:40.667Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-07T14:36:40.667Z] > authorizing via signed-in user (portughalam@gmail.com)
+[debug] [2024-01-07T14:36:40.667Z] [iam] checking project transition-terminal for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-07T14:36:40.668Z] > refreshing access token with scopes: []
+[debug] [2024-01-07T14:36:40.668Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-07T14:36:40.668Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-07T14:36:40.852Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-01-07T14:36:40.852Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-07T14:36:40.856Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/transition-terminal:testIamPermissions [none]
+[debug] [2024-01-07T14:36:40.857Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/transition-terminal:testIamPermissions x-goog-quota-user=projects/transition-terminal
+[debug] [2024-01-07T14:36:40.857Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/transition-terminal:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-07T14:36:40.865Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-01-07T14:36:40.865Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-01-07T14:36:41.177Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/transition-terminal:testIamPermissions 200
+[debug] [2024-01-07T14:36:41.177Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/transition-terminal:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-07T14:36:41.178Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/transition-terminal [none]
+[debug] [2024-01-07T14:36:41.557Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/transition-terminal 200
+[debug] [2024-01-07T14:36:41.557Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/transition-terminal {"projectId":"transition-terminal","projectNumber":"314390865424","displayName":"transition-terminal","name":"projects/transition-terminal","resources":{"hostingSite":"transition-terminal","realtimeDatabaseInstance":"transition-terminal-default-rtdb"},"state":"ACTIVE","etag":"1_ba0be7ea-ef21-45ce-98d4-28d1467c9510"}
+[debug] [2024-01-07T14:36:42.629Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/transition-terminal/sites pageToken=&pageSize=10
+[debug] [2024-01-07T14:36:43.409Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/transition-terminal/sites 200
+[debug] [2024-01-07T14:36:43.409Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/transition-terminal/sites {"sites":[{"name":"projects/transition-terminal/sites/transition-terminal","defaultUrl":"https://transition-terminal.web.app","appId":"1:314390865424:web:6b8da509ac009b5dad0c95","type":"DEFAULT_SITE"}]}
+[debug] [2024-01-07T14:36:43.410Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:314390865424:web:6b8da509ac009b5dad0c95/config [none]
+[debug] [2024-01-07T14:36:43.946Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:314390865424:web:6b8da509ac009b5dad0c95/config 200
+[debug] [2024-01-07T14:36:43.946Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:314390865424:web:6b8da509ac009b5dad0c95/config {"projectId":"transition-terminal","appId":"1:314390865424:web:6b8da509ac009b5dad0c95","databaseURL":"https://transition-terminal-default-rtdb.firebaseio.com","storageBucket":"transition-terminal.appspot.com","apiKey":"AIzaSyDTyfRBAraHLshds-X3p5zwNE8ITnmXYWk","authDomain":"transition-terminal.firebaseapp.com","messagingSenderId":"314390865424","measurementId":"G-3WXEVRFJVD"}
+[info] 
+   Thank you for trying our experimental support for SvelteKit on Firebase Hosting.
+   While this integration is maintained by Googlers it is not a supported Firebase product.
+   Issues filed on GitHub will be addressed on a best-effort basis by maintainers and other community members.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/frameworks-overview
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-01-07T14:37:00.166Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:820:11)
+    at Object.execSync (node:child_process:891:15)
+    at execSync (pkg/prelude/bootstrap.js:2111:30)
+    at prepareFrameworks (/home/gray/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/frameworks/index.js:372:42)
+    at async deploy (/home/gray/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
