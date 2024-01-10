@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+export const ssr = false;
 const firebaseConfig = {
     apiKey: "AIzaSyDTyfRBAraHLshds-X3p5zwNE8ITnmXYWk",
     authDomain: "transition-terminal.firebaseapp.com",

@@ -2,6 +2,7 @@ import { initializeApp } from "firebase/app";
 import { browser } from "$app/environment";
 import { goto } from "$app/navigation";
 import { getAuth } from "firebase/auth";
+export const ssr = false;
 const firebaseConfig = {
     apiKey: "AIzaSyDTyfRBAraHLshds-X3p5zwNE8ITnmXYWk",
     authDomain: "transition-terminal.firebaseapp.com",
@@ -14,13 +15,6 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 let auth = getAuth(app)
-auth.onAuthStateChanged((user) => {
-    if (user) {
-        if (browser) {
-            goto('/home')
-        }
-    }
-})
 
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {

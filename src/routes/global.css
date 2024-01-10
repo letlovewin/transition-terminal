@@ -11886,6 +11886,14 @@ body {
   font-size: smaller;
 }
 
+.bg-post {
+  background-color: #2b0a1a;
+}
+
+*:focus {
+  box-shadow: none !important;
+}
+
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;

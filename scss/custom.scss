@@ -49,6 +49,14 @@ body {
     font-size: smaller;
 }
 
+.bg-post {
+    background-color: $pink-900;
+}
+
+*:focus {
+    box-shadow: none !important;
+}
+
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;

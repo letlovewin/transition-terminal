@@ -2,6 +2,7 @@
 // @ts-nocheck
 
 	export let showModal; // boolean
+	export let closeButton;
 
 	let dialog; // HTMLDialogElement
 
@@ -9,6 +10,7 @@
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
+{#if closeButton=='true'}
 <dialog
 	bind:this={dialog}
 	on:close={() => (showModal = false)}
@@ -21,9 +23,33 @@
 		<slot />
 		<hr />
 		<!-- svelte-ignore a11y-autofocus -->
-		<button class="btn btn-outline-secondary" autofocus on:click={() => dialog.close()}>Close</button>
+		{#if closeButton=='true'}
+			<button class="btn btn-outline-secondary" autofocus on:click={() => dialog.close()}>Close</button>
+		{/if}
+		
 	</div>
 </dialog>
+{:else}
+<dialog
+	bind:this={dialog}
+	on:close={() => (showModal = false)}
+>
+	<!-- svelte-ignore a11y-no-static-element-interactions -->
+	<div on:click|stopPropagation>
+		<slot name="header" />
+		<hr />
+		<slot />
+		<hr />
+		<!-- svelte-ignore a11y-autofocus -->
+		{#if closeButton=='true'}
+			<button class="btn btn-outline-secondary" autofocus on:click={() => dialog.close()}>Close</button>
+		{/if}
+		
+	</div>
+</dialog>
+
+{/if}
+
 
 <style>
 	dialog {
